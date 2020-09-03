@@ -1,0 +1,15 @@
+---
+title: Leaflet and RMarkdown assignment `r Sys.Date()`
+output:
+  html_document:
+  keep_md: yes
+---
+  
+```{r echo=FALSE}
+library(leaflet)
+df <- data.frame(lat=19.741755, lng = -155.844437)
+df %>%
+  leaflet() %>% 
+  addTiles() %>%
+  addMarkers()
+```
